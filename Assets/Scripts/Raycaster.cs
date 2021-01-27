@@ -37,6 +37,8 @@ public class Raycaster : MonoBehaviour
                 {
                     door.PlayerInteract(transform.parent.position);
                 }
+                ItemPickup pickup = hit.transform.GetComponent<ItemPickup>();
+                if (pickup != null) pickup.PlayerInteract();
             }
         }
     }
